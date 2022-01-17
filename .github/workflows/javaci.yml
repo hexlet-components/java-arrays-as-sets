@@ -1,0 +1,23 @@
+name: JavaCI
+
+on:
+  - push
+  - pull_request
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up OpenJDK
+        uses: actions/setup-java@v1
+        with:
+          distribution: 'temurin'
+          java-version: '16'
+      - name: Build with Gradle
+        run: make build
+      - name: Codestyle
+        run: make lint
+      - name: Tests
+        run: make test
