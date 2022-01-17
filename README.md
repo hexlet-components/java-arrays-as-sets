@@ -3,7 +3,7 @@
 # Usage example:
 
 Intersection:
-```
+```java
 import static lib.ArraysAsSets.*;
 
 String[] firstArr = new String[]{"Vasya", "Kolya", "Petya"};
@@ -13,7 +13,7 @@ intersection(firstArr, secondArr) => ["Vasya", "Kolya"]
 ```
 
 Union:
-```
+```java
 import static lib.ArraysAsSets.*;
 
 String[] firstArr = new String[]{"Vasya", "Kolya", "Petya"};
@@ -23,7 +23,7 @@ union(firstArr, secondArr) => ["Petya", "Sasha", "Igor", "Kolya", "Vasya", "Serg
 ```
 
 Difference:
-```
+```java
 import static lib.ArraysAsSets.*;
 
 String[] firstArr = new String[]{"Vasya", "Kolya", "Petya"};
@@ -32,7 +32,7 @@ difference(firstArr, secondArr) => ["Kolya"]
 ```
 
 Includes:
-```
+```java
 import static lib.ArraysAsSets.*;
 
 String[] firstArr = new String[]{"Vasya", "Kolya", "Petya"};
