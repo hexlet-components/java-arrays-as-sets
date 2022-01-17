@@ -9,7 +9,7 @@ import static lib.ArraysAsSets.*;
 String[] firstArr = new String[]{"Vasya", "Kolya", "Petya"};
 String[] secondArr = new String[]{"Igor", "Petya", "Sergey", "Vasya", "Sasha"};
 
-intersection(firstArr, secondArr) => ["Vasya", "Kolya"]
+intersection(firstArr, secondArr) => ["Vasya", "Petya"]
 ```
 
 Union:
