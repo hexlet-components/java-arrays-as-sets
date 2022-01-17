@@ -1,42 +1,46 @@
 # java-arrays-as-sets
 
-# Usage example:
+**Usage example:**
 
 Intersection:
+
 ```java
-import static lib.ArraysAsSets.*;
+import static io.hexlet.utils.ArraysAsSets;
 
-String[] firstArr = new String[]{"Vasya", "Kolya", "Petya"};
-String[] secondArr = new String[]{"Igor", "Petya", "Sergey", "Vasya", "Sasha"};
+String[] firstNames = {"Vasya", "Kolya", "Petya"};
+String[] secondNames = {"Igor", "Petya", "Sergey", "Vasya", "Sasha"};
 
-intersection(firstArr, secondArr) => ["Vasya", "Petya"]
+intersection(firstNames, secondNames); // => ["Vasya", "Petya"]
 ```
 
 Union:
+
 ```java
-import static lib.ArraysAsSets.*;
+import static io.hexlet.utils.ArraysAsSets;
 
-String[] firstArr = new String[]{"Vasya", "Kolya", "Petya"};
-String[] secondArr = new String[]{"Igor", "Petya", "Sergey", "Vasya", "Sasha"};
+String[] firstNames = {"Vasya", "Kolya", "Petya"};
+String[] secondNames = {"Igor", "Petya", "Sergey", "Vasya", "Sasha"};
 
-union(firstArr, secondArr) => ["Petya", "Sasha", "Igor", "Kolya", "Vasya", "Sergey"]
+union(firstNames, secondNames); // => ["Petya", "Sasha", "Igor", "Kolya", "Vasya", "Sergey"]
 ```
 
 Difference:
-```java
-import static lib.ArraysAsSets.*;
 
-String[] firstArr = new String[]{"Vasya", "Kolya", "Petya"};
-String[] secondArr = new String[]{"Igor", "Petya", "Sergey", "Vasya", "Sasha"};
-difference(firstArr, secondArr) => ["Kolya"]
+```java
+import static io.hexlet.utils.ArraysAsSets;
+
+String[] firstNames = {"Vasya", "Kolya", "Petya"};
+String[] secondNames = {"Igor", "Petya", "Sergey", "Vasya", "Sasha"};
+difference(firstNames, secondNames); // => ["Kolya"]
 ```
 
 Includes:
+
 ```java
-import static lib.ArraysAsSets.*;
+import static io.hexlet.utils.ArraysAsSets;
 
-String[] firstArr = new String[]{"Vasya", "Kolya", "Petya"};
+String[] names = {"Vasya", "Kolya", "Petya"};
 
-includes(firstArr, "Vasya") => true
-includes(firstArr, "Sergey") => false
+includes(names, "Vasya"); // => true
+includes(names, "Sergey"); // => false
 ```
