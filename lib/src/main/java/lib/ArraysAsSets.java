@@ -29,11 +29,4 @@ public class ArraysAsSets {
     public static <T> boolean includes(T[] arr, T data) {
         return Arrays.asList(arr).contains(data);
     }
-
-    public static void main(String[] args) {
-        final Integer[] firstIntArr = new Integer[]{13, 22, 14};
-        final Integer[] secondIntArr = new Integer[]{12, 13, 45, 22, 99};
-
-        System.out.println(includes(firstIntArr, 10));
-    }
 }
