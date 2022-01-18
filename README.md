@@ -7,8 +7,8 @@
 ```java
 import static io.hexlet.utils.ArraysAsSets;
 
-String[] firstNames = { "Vasya", "Kolya", "Petya" };
-String[] secondNames = { "Igor", "Petya", "Sergey", "Vasya", "Sasha" };
+String[] firstNames = {"Vasya", "Kolya", "Petya"};
+String[] secondNames = {"Igor", "Petya", "Sergey", "Vasya", "Sasha"};
 
 intersection(firstNames, secondNames);
 // ["Vasya", "Petya"]
@@ -19,8 +19,8 @@ intersection(firstNames, secondNames);
 ```java
 import static io.hexlet.utils.ArraysAsSets;
 
-String[] firstNames = { "Vasya", "Kolya", "Petya" };
-String[] secondNames = { "Igor", "Petya", "Sergey", "Vasya", "Sasha" };
+String[] firstNames = {"Vasya", "Kolya", "Petya"};
+String[] secondNames = {"Igor", "Petya", "Sergey", "Vasya", "Sasha"};
 
 union(firstNames, secondNames);
 // ["Petya", "Sasha", "Igor", "Kolya", "Vasya", "Sergey"]
@@ -31,8 +31,8 @@ union(firstNames, secondNames);
 ```java
 import static io.hexlet.utils.ArraysAsSets;
 
-String[] firstNames = { "Vasya", "Kolya", "Petya" };
-String[] secondNames = { "Igor", "Petya", "Sergey", "Vasya", "Sasha" };
+String[] firstNames = {"Vasya", "Kolya", "Petya"};
+String[] secondNames = {"Igor", "Petya", "Sergey", "Vasya", "Sasha"};
 difference(firstNames, secondNames);
 // ["Kolya"]
 ```
