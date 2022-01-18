@@ -13,8 +13,9 @@ jobs:
       - name: Set up OpenJDK
         uses: actions/setup-java@v2
         with:
-          java-version: '16'
+          java-version: '17'
           cache: 'gradle'
+          distribution: 'temurin'
       - run: make build
       - run: make lint
       - run: make test
