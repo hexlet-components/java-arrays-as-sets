@@ -1,10 +1,11 @@
 plugins {
     id 'java-library'
     id 'checkstyle'
+    id 'com.adarshr.test-logger' version '3.1.0'
 }
 
 compileJava {
-    options.release = 16
+    options.release = 17
 }
 
 repositories {

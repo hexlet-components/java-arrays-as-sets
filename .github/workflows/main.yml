@@ -1,0 +1,20 @@
+name: JavaCI
+
+on:
+  - push
+  - pull_request
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up OpenJDK
+        uses: actions/setup-java@v2
+        with:
+          java-version: '16'
+          cache: 'gradle'
+      - run: make build
+      - run: make lint
+      - run: make test
