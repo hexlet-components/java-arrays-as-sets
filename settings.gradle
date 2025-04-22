@@ -8,4 +8,4 @@
  */
 
 rootProject.name = 'java-arrays-as-sets'
-include('lib')
+

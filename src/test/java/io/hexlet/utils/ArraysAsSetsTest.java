@@ -1,7 +1,6 @@
 package io.hexlet.utils;
 
-import static org.junit.Assert.assertArrayEquals;
-
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import org.junit.jupiter.api.Test;
 
 public class ArraysAsSetsTest {
