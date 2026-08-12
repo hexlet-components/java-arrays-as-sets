@@ -8,9 +8,7 @@ public class ArraysAsSets {
 
     @SuppressWarnings("unchecked")
     public static <T> T[] intersection(final T[] coll1, final T[] coll2) {
-        final var result = Arrays.stream(coll1)
-            .distinct()
-            .filter(Arrays.asList(coll2)::contains);
+        final var result = Arrays.stream(coll1).distinct().filter(Arrays.asList(coll2)::contains);
 
         return (T[]) result.toArray();
     }
@@ -26,8 +24,7 @@ public class ArraysAsSets {
     @SuppressWarnings("unchecked")
     public static <T> T[] difference(final T[] coll1, final T[] coll2) {
         var coll2AsList = Arrays.asList(coll2);
-        final var result = Arrays.stream(coll1)
-            .filter(e -> !coll2AsList.contains(e));
+        final var result = Arrays.stream(coll1).filter(e -> !coll2AsList.contains(e));
 
         return (T[]) result.toArray();
     }

@@ -2,7 +2,10 @@ build:
 	./gradlew clean build
 
 lint:
-	./gradlew checkstyleMain checkstyleTest
+	./gradlew spotlessCheck
+
+lint-fix:
+	./gradlew spotlessApply
 
 test:
 	./gradlew test

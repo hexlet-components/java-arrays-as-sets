@@ -1,6 +1,7 @@
 package io.hexlet.utils;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+
 import org.junit.jupiter.api.Test;
 
 public class ArraysAsSetsTest {
@@ -9,7 +10,6 @@ public class ArraysAsSetsTest {
     private final String[] strColl2 = {"Igor", "Petya", "Sergey", "Vasya", "Sasha"};
     private final Integer[] intColl1 = {13, 22, 14};
     private final Integer[] intColl2 = {12, 13, 45, 22, 99};
-
 
     @Test
     void intersectionTest() {
