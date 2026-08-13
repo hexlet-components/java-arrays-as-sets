@@ -3,20 +3,25 @@ import org.gradle.api.tasks.testing.logging.TestLogEvent
 
 plugins {
     java
-    checkstyle
-    id("com.github.ben-manes.versions") version "0.56.0"
+    alias(libs.plugins.spotless)
+    alias(libs.plugins.versions)
+    alias(libs.plugins.version.catalog.update)
 }
 
 group = "io.hexlet"
 
 version = "1.0-SNAPSHOT"
 
+java {
+    toolchain { languageVersion = JavaLanguageVersion.of(25) }
+}
+
 repositories { mavenCentral() }
 
 dependencies {
-    testImplementation(platform("org.junit:junit-bom:6.1.2"))
-    testImplementation("org.junit.jupiter:junit-jupiter")
-    testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+    testImplementation(platform(libs.junitBom))
+    testImplementation(libs.junitJupiter)
+    testRuntimeOnly(libs.junitPlatformLauncher)
 }
 
 tasks.test {
@@ -26,4 +31,22 @@ tasks.test {
         events = mutableSetOf(TestLogEvent.FAILED, TestLogEvent.PASSED, TestLogEvent.SKIPPED)
         showStandardStreams = true
     }
+}
+
+spotless {
+    java {
+        importOrder()
+        removeUnusedImports()
+        googleJavaFormat().aosp()
+        formatAnnotations()
+        leadingTabsToSpaces(4)
+        endWithNewline()
+    }
+}
+
+// versionCatalogUpdate пишет свежие версии прямо в gradle/libs.versions.toml,
+// поэтому руками их сверять не нужно. Ключи не сортируются: порядок в каталоге
+// смысловой, по группам зависимостей.
+versionCatalogUpdate {
+    sortByKey = false
 }
