@@ -4,7 +4,7 @@ versions = { id = "io.github.ben-manes.versions", version.ref = "versions-plugin
 version-catalog-update = { id = "nl.littlerobots.version-catalog-update", version.ref = "catalog-update-plugin" }
 
 [versions]
-spotless-plugin = "8.9.0"
+spotless-plugin = "8.10.1"
 versions-plugin = "0.61.0"
 catalog-update-plugin = "1.1.1"
 junit-bom = "6.1.3"
